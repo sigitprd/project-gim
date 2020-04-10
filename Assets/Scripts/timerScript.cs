@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class timerScript : MonoBehaviour
@@ -30,6 +31,7 @@ public class timerScript : MonoBehaviour
             timerText.text = "Time: " + counter.ToString();
         }
 
-        timerText.text = "GAME OVER!";
+        SceneManager.LoadScene("GameOverScene");
+        
     }
 }
