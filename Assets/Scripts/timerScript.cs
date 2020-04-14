@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class timerScript : MonoBehaviour
 {
-    public int counter = 30;
+    public int counter = 15;
     public Text timerText;
 
     // Start is called before the first frame update
