@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\pemenangScript.cs" />
     <Compile Include="Assets\Scripts\playerMovement.cs" />
     <Compile Include="Assets\Scripts\playScript.cs" />
+    <Compile Include="Assets\Scripts\scoringScript.cs" />
     <Compile Include="Assets\Scripts\timerScript.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />

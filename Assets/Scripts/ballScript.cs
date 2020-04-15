@@ -9,16 +9,17 @@ public class ballScript : MonoBehaviour
     //public int speed = 20;
     public Rigidbody2D ball;
     public Animator animtr;
-    public int score1 = 0;
-    public int score2 = 0;
-    public TextMeshProUGUI scoreText1;
-    public TextMeshProUGUI scoreText2;
+    public GameObject masterScript;
+    //public int score1 = 0;
+    //public int score2 = 0;
+    //public TextMeshProUGUI scoreText1;
+    //public TextMeshProUGUI scoreText2;
 
     void Start()
     {
         //ball.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
-        scoreText1.text = "0";
-        scoreText2.text = "0";
+        //scoreText1.text = "0";
+        //scoreText2.text = "0";
         StartCoroutine(hitungMundurStart());
         animtr.SetBool("IsMove", true);
     }
@@ -39,19 +40,20 @@ public class ballScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
-        if (collision.collider.name == "WallLeft")
+        if (collision.collider.name == "WallLeft" || collision.collider.name == "WallRight")
         {
-            //GetComponent<Transform>().position = new Vector2(0, 0);
-            score1 += 1;
-            scoreText1.text = score1.ToString();
+            ////GetComponent<Transform>().position = new Vector2(0, 0);
+            //score1 += 1;
+            //scoreText1.text = score1.ToString();
+            masterScript.GetComponent<scoringScript>().UpdateScore(collision.collider.name);
             StartCoroutine(hitungMundurCollision());
         } 
-        else if(collision.collider.name == "WallRight")
-        {
-            score2 += 1;
-            scoreText2.text = score2.ToString();
-            StartCoroutine(hitungMundurCollision());
-        }
+        //else if(collision.collider.name == "WallRight")
+        //{
+        //    score2 += 1;
+        //    scoreText2.text = score2.ToString();
+        //    StartCoroutine(hitungMundurCollision());
+        //}
 
     }
 

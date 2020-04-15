@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab276f2515968d459705d1a06f2c0f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tex: {fileID: 532880331}
+  win: {fileID: 532880331}
 --- !u!114 &532880331
 MonoBehaviour:
   m_ObjectHideFlags: 0
