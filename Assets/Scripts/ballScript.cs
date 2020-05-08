@@ -10,6 +10,8 @@ public class ballScript : MonoBehaviour
     public Rigidbody2D ball;
     public Animator animtr;
     public GameObject masterScript;
+
+    public AudioSource hitEffect;
     //public int score1 = 0;
     //public int score2 = 0;
     //public TextMeshProUGUI scoreText1;
@@ -47,6 +49,10 @@ public class ballScript : MonoBehaviour
             //scoreText1.text = score1.ToString();
             masterScript.GetComponent<scoringScript>().UpdateScore(collision.collider.name);
             StartCoroutine(hitungMundurCollision());
+        }
+        if(collision.collider.tag == "Player")
+        {
+            hitEffect.Play();
         } 
         //else if(collision.collider.name == "WallRight")
         //{
